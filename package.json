@@ -1,16 +1,17 @@
 {
-  "name": "nft-minter-utility",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@hashgraph/sdk": "^2.14.2",
-    "dotenv": "^16.0.1",
-    "nft.storage": "^6.3.0"
-  }
+	"name": "nft-minter-utility",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"type": "module",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "",
+	"license": "ISC",
+	"dependencies": {
+		"@hashgraph/sdk": "^2.14.2",
+		"dotenv": "^16.0.1",
+		"nft.storage": "^6.3.0"
+	}
 }
