@@ -22,16 +22,17 @@ async function tokenCreateFcn(client, apiKey, tokenId) {
 	for (var i = 0; i < files.length; i++) {
 		const fileName = "./img/" + files[i];
 		const nftJSON = {
-			name: "DDNFT Ticket #" + (tokenSupply + (i + 1)),
-			creator: "Swirlds Labs",
-			description: "This is an example NFT metadata. Need to add something generic here", // NEED TO FINALIZE THIS
+			name: "dApp Days NFT #" + (tokenSupply + (i + 1)),
+			creator: "Swirlds Labs Inc.",
+			description:
+				"Non-fungible token recognizing hodler's attendance and completion of Hedera dApp Days.",
 			image: new File([await fs.promises.readFile(fileName)], fileName, { type: "image/jpg" }),
 			type: "image/jpg",
 			format: "none",
 			properties: {
-				collection: "Hedera dApp Days", // NEED TO FINALIZE THIS
-				website: "www.hedera.com/dapp-days",
-				// can add more arbitrary info here - NEED TO FINALIZE THIS
+				event: "Hedera dApp Days - Consensus 2022", // CHANGE EVERY BATCH
+				date: "7 June 2022", // CHANGE EVERY BATCH
+				website: "https://hedera.com/dapp-days",
 			},
 		};
 		const metadata = await nftClient.store(nftJSON);
