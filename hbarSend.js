@@ -21,4 +21,5 @@ async function hbarSendFcn(client, accounts, hbar2Send) {
 
 	return hbarSendRx;
 }
+
 export default hbarSendFcn;

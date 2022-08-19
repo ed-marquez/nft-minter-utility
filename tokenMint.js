@@ -20,13 +20,15 @@ async function tokenCreateFcn(client, apiKey, tokenId) {
 	// MINT NEW BATCH OF NFTs WITH NFT STORAGE
 	let mintRx = [];
 	for (var i = 0; i < files.length; i++) {
-		const fileName = "./img/" + files[i];
+		const fileName = files[i];
 		const nftJSON = {
 			name: "dApp Days NFT #" + (tokenSupply + (i + 1)),
 			creator: "Swirlds Labs Inc.",
 			description:
 				"Non-fungible token recognizing hodler's attendance and completion of Hedera dApp Days.",
-			image: new File([await fs.promises.readFile(fileName)], fileName, { type: "image/jpg" }),
+			image: new File([await fs.promises.readFile(folder + "/" + fileName)], fileName, {
+				type: "image/jpg",
+			}),
 			type: "image/jpg",
 			format: "none",
 			properties: {
