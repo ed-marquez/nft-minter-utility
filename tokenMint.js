@@ -24,16 +24,15 @@ async function tokenCreateFcn(client, apiKey, tokenId) {
 		const nftJSON = {
 			name: "dApp Days NFT #" + (tokenSupply + (i + 1)),
 			creator: "Swirlds Labs Inc.",
-			description:
-				"Non-fungible token recognizing hodler's attendance and completion of Hedera dApp Days.",
+			description: "Non-fungible token recognizing hodler's attendance and completion of Hedera dApp Days.",
 			image: new File([await fs.promises.readFile(folder + "/" + fileName)], fileName, {
 				type: "image/jpg",
 			}),
 			type: "image/jpg",
 			format: "none",
 			properties: {
-				event: "Hedera dApp Days - Consensus 2022", // CHANGE EVERY BATCH
-				date: "7 June 2022", // CHANGE EVERY BATCH
+				event: "Hedera dApp Days - ASU 2022", // CHANGE EVERY BATCH
+				date: "28 September 2022", // CHANGE EVERY BATCH
 				website: "https://hedera.com/dapp-days",
 			},
 		};
